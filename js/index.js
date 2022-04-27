@@ -66,36 +66,14 @@ async function renderAside(){
 }
 renderAside()
 
-
-// PLANTATIONS
-
-// async function renderPlantations(){
-//     const plantations = await getPlantations().then(res => {
-//         console.log(res)
-//         return res
-//     })
-
-//     plantations.results.forEach(element => {
-//         console.log(element)
-//         renderHeader(element)
-//         });
-
-    
-// }
-// renderPlantations()
-
-
 async function renderNotes(){
     const notes = await getNotes().then(res => {
         return res
     })
-
-    // console.log(notes)
     
     const plantations = await getPlantations().then(res => {
         return res
     })
-    // console.log(plantations)
 
     
     // pegando os cards da fazenda
@@ -105,25 +83,26 @@ async function renderNotes(){
         }
     });
 
-
-    let ids = []
-    plantations.results.forEach((element, index) => {
-        // ids.push(element.id)
-        console.log(element)
-        renderHeader(element)
-
-        notes.results.forEach(note => {
-            if (note.location_type === "Plantation"){
-                if (element.id === note.location.id){
-                    renderCard(note)
-                } 
+    let arr1 = []
+    notes.results.forEach( nota => {
+        plantations.results.forEach (plantation => {
+            if (nota.location.id === plantation.id){
+                arr1.push(nota)
             }
-        });
-       
-    });
+        })
+    })
     
+    plantations.results.forEach( _element => {
+        renderHeader(_element)
 
-    
+        arr1.forEach( element => {
+
+            if (element.location.id === _element.id){
+                let currentid = element.location.id
+                renderCard(element, currentid) 
+            }
+        })   
+    });
 }
 renderNotes()
 
@@ -165,8 +144,8 @@ function renderCardFarm(element){
     }      
 }
 
-function renderCard(element){
-    const divHeader = document.querySelector("[data-he]")
+function renderCard(element, currentid){
+    const divHeader = document.querySelector(`[data-he${currentid}]`)
 
     // Verificando se há imagens no card
     if (element.attachments.images.length !== 0){
@@ -240,7 +219,7 @@ function renderHeader(element){
    </div>
 
 </div>
-<div class="farm-notes" data-he>
+<div class="farm-notes" data-he${element.id}>
 </div>
 
 </div>`
