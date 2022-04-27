@@ -1,0 +1,31 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+    
+main
+    .content
+        background-color: variables.$main-color
+        display: flex
+        flex: 1
+        flex-direction: column
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        height: fit-content
+        @include base-mixins.w1049
+            align-items: flex-start
+            width: 432px
+            flex: 0
+    h2
+        font-size: 20px
+        font-family: Inter
+        font-weight: 600
+        align-self: self-start
+        margin-top: -23px
+    .farm-notes
+        display: flex
+        flex-wrap: wrap
+        @include base-mixins.w1049
+            flex-direction: column
+        
+        

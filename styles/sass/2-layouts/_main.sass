@@ -1,0 +1,38 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+    
+main
+    display: flex
+    flex: 1
+    flex-wrap: wrap
+    align-content: flex-start
+    align-items: flex-start // cross axis
+    justify-content: center // main axis
+    width: 100%
+    background-color: variables.$main-color
+    // @include base-mixins.w1049
+    //         width: 100%
+    @include base-mixins.w425
+            
+
+    .wrapper
+        width: 1050px
+        display: flex
+        justify-content: center
+        align-content: flex-start
+        // flex-wrap: wrap
+        margin: 66px 0 40px 0 
+        // @include base-mixins.wrapper
+        //     width: 1050px
+        @include base-mixins.w1049
+            width: 768px
+            flex-wrap: nowrap
+        @include base-mixins.w425
+            width: 100%
+            margin: 0
+            margin: 16px 16px
+            flex-direction: column
+            
+        
+
+        

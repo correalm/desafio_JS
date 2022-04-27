@@ -1,0 +1,92 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+
+aside
+    display: flex
+    flex-direction: column
+    background-color: variables.$white
+    margin-right: 24px
+    height: fit-content
+    width: 248px
+    color: green
+    border: 2px solid #DFE0E7
+    border-radius: 8px
+    @include base-mixins.w425
+        width: 100%
+        box-sizing: border-box
+        margin-bottom: 16px
+    h3
+        font-family: Inter
+        font-weight: 700
+        font-size: 12px
+        color: variables.$aside-h3-color
+    p
+        color: variables.$aside-p-color
+        font-family: Inter
+        font-size: 15px 
+    .title
+        padding: 16px
+        border-bottom: 1px solid variables.$footer-color
+        
+        .p-talhoes
+            color: variables.$footer-p-color
+            font-size: 14px
+            font-weight: 400
+    .info
+        padding: 16px
+        border-bottom: 1px solid variables.$footer-color
+
+        .date
+            display: flex
+            justify-content: space-between
+            margin-bottom: 16px
+            .safra
+                margin-right: 20px
+        .name
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            margin-bottom: 16px
+            .init
+                margin-right: 75px
+                border: 1px solid #DFE0E7
+                width: 32px
+                height: 32px
+                display: flex
+                align-items: center
+                justify-content: center
+                border-radius: 50%
+                background-color: #E5E5E5
+                p
+                    font-size: 14px
+        .pluv
+            span
+                padding-right: 2px
+            i
+                color: #1854C4
+                font-size: 14px
+                
+            p
+                font-size: 16px
+                font-weight: 700
+
+            .acumulo
+                font-size: 12px
+                color: #627389
+                font-weight: 400
+                font-family: Inter
+                text-transform: none
+    .obs
+        padding: 16px
+        border-bottom: 1px solid variables.$footer-color
+        
+        p
+            text-transform: none
+            font-size: 14px
+            color: variables.$aside-p-color
+    
+    .press
+        padding: 16px
+        display: flex
+        align-items: center
+        justify-content: center

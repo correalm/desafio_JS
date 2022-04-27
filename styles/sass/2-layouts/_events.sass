@@ -1,0 +1,85 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+
+.events
+    width: 100%
+    margin-top: 16px
+    display: flex
+    flex-direction: column
+    
+    h2
+        margin-top: 0px
+        margin-bottom: 8px
+
+    .event
+        width: 100%
+        margin-bottom: 16px
+        &-header
+            display: flex
+            border: 1px solid #DFE0E7
+            border-radius: 8px
+            background-color: #fff
+            justify-content: space-between
+            .events-header-farm-title
+                display: flex
+                flex-direction: column
+                padding: 20px 16px
+                border-right: 1px solid #E7E8EF
+                box-sizing: border-box
+                width: 472px
+                .event-header-title
+                    display: flex
+                    h3
+                        font-family: Inter
+                        font-weight: 700
+                        font-size: 16px
+                        color: #20252B
+                    span
+                        font-family: Roboto
+                        font-size: 12px
+                        color: #798AA4
+                        border: 1px solid #E7E8EF
+                        background-color: #FFF
+                        padding: 1px
+                        border-radius: 4px
+                        height: fit-content
+                        margin-left: 8px
+        p
+            font-size: 12px
+            color: #627389
+            font-weight: 400
+            font-family: Inter
+
+        .plantado
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 1px solid #57760A
+            border-radius: 8px
+            width: fit-content
+            padding: 1px
+            margin-top: 6px
+            p
+                font-family: Roboto
+                font-weight: 700
+                color: #57760A
+
+        .events-header-dates
+            padding-right: 16px
+            display: flex
+            justify-content: space-between
+            width: 219px
+            align-items: center
+            border-right: 1px solid #E7E8EF
+            @include base-mixins.w1049
+                display: none
+
+        .events-container-arrow
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-right: 20px
+            cursor: pointer
+            
+        &-container
+            display: flex
