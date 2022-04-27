@@ -248,7 +248,3 @@ function renderHeader(element){
 divHeader.insertAdjacentHTML('beforeend', header)
 }
 
-
-const hide = document.querySelector("[arrow]")
-console.log(hide)
-console.log("testando")
