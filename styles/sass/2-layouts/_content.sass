@@ -16,17 +16,25 @@ main
             align-items: flex-start
             width: 432px
             flex: 0
+        @include base-mixins.w720px
+            width: 100%
+            
     h2
         font-size: 20px
         font-family: Inter
         font-weight: 600
         align-self: self-start
         margin-top: -23px
+        @include base-mixins.w720px
+            margin-top: 16px
+            margin-bottom: 8px
     .farm-notes
         transition: .5s
         display: flex
         flex-wrap: wrap
         @include base-mixins.w1049
             flex-direction: column
+        @include base-mixins.w720px
+            width: 100%
         
         
