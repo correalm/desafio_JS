@@ -1,5 +1,2 @@
-import {renderAside} from "./modules/renderAside.js"
-import {renderNotes} from './modules/renderNotes.js'
-
-renderAside()
-renderNotes()
+import {load} from './modules/load.js'
+load()

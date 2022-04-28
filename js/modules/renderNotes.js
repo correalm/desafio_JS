@@ -14,7 +14,7 @@ export async function renderNotes(){
     })
     
     // pegando os cards da fazenda
-    notes.results.forEach(element => {
+    notes.results.forEach((element) => {
         if (element.location_type === "Farm"){
             renderCardFarm(element)
         }
@@ -24,7 +24,7 @@ export async function renderNotes(){
    
     notes.results.forEach( nota => {
         plantations.results.forEach (plantation => {
-            if (nota.location.id === plantation.id){
+            if (plantation.id === nota.location.id){
                 notasPlantation.push(nota)
             }
         })
@@ -40,13 +40,10 @@ export async function renderNotes(){
             } 
         })
 
-        console.log(test)
-        
-
         renderHeader(plantation, index, test)
 
         notasPlantation.forEach( nota => {
-            if (nota.location.id === plantation.id){
+            if (plantation.id === nota.location.id){
                 let currentid = nota.location.id
                 renderCard(nota, currentid) 
             }

@@ -6,7 +6,7 @@ export function renderCard(element, currentid){
         //Add cada url de img para poder acessar
         const urls = []
         element.attachments.images.forEach( el => {
-            urls.push(el.thumb_url)
+            urls.push(el.medium_url)
         })
 
         // Criando o Card
@@ -22,6 +22,9 @@ export function renderCard(element, currentid){
         
         // Add o card a estrutura do html
         divHeader.insertAdjacentHTML('afterbegin', card)
+        document.querySelector(".img").addEventListener("click", function(){
+            console.log("CLIQUEI NA IMAGEM")
+        })
         // console.log(card)
     
     } else {

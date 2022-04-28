@@ -6,7 +6,7 @@ export function renderCardFarm(element){
         //Add cada url de img para poder acessar
         const urls = []
         element.attachments.images.forEach( el => {
-            urls.push(el.thumb_url)
+            urls.push(el.medium_url)
         })
         
         // Criando o Card
