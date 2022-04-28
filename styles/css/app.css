@@ -50,7 +50,6 @@ main .wrapper {
   width: 1050px;
   display: flex;
   justify-content: center;
-  align-content: flex-start;
   margin: 66px 0 40px 0;
 }
 @media (max-width: 1049px) {
@@ -213,7 +212,7 @@ main h2 {
   font-family: Inter;
   font-weight: 600;
   align-self: self-start;
-  margin-top: -23px;
+  margin-top: -31px;
   margin-bottom: 8px;
 }
 @media (max-width: 720px) {

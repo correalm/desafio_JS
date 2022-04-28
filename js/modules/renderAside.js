@@ -1,16 +1,18 @@
-import {getFarm} from './getFarm.js'
+import {getFarm, getRain} from './getFarm.js'
 import {getPlantations} from './getPlantations.js'
 
 export async function renderAside(){
 
     const data = await getFarm().then(res => {
-        console.log(res)
         return res
     })
 
     const plantations = await getPlantations().then(res => {
-        console.log(res)
         return res  
+    })
+
+    const rain = await getRain().then(res => {
+        return res
     })
    
     const wrapper = document.querySelector(".wrapper")
@@ -56,7 +58,7 @@ export async function renderAside(){
                     </div>
                   <div class="pluv">
                         <h3>Pluviometria</h3>
-                        <p><span><i class="fa-solid fa-droplet"></i></span>118mm</p>
+                        <p><span><i class="fa-solid fa-droplet"></i></span>${rain.rain_until_date}mm</p>
                         <p class="acumulo">Acumulado na safra</p>
                     </div> 
                 </div>
