@@ -204,6 +204,7 @@ main h2 {
   margin-top: -23px;
 }
 main .farm-notes {
+  transition: 0.5s;
   display: flex;
   flex-wrap: wrap;
 }
@@ -242,6 +243,11 @@ main .farm-notes {
   box-sizing: border-box;
   width: 472px;
 }
+@media (max-width: 1049px) {
+  .events .event-header .events-header-farm-title {
+    width: 275px;
+  }
+}
 .events .event-header .events-header-farm-title .event-header-title {
   display: flex;
 }
@@ -275,7 +281,7 @@ main .farm-notes {
   border: 1px solid #57760A;
   border-radius: 8px;
   width: fit-content;
-  padding: 1px;
+  padding: 2px;
   margin-top: 6px;
 }
 .events .event .plantado p {
@@ -302,6 +308,12 @@ main .farm-notes {
   justify-content: center;
   margin-right: 20px;
   cursor: pointer;
+}
+@media (max-width: 1049px) {
+  .events .event .events-container-arrow {
+    align-items: center;
+    justify-content: center;
+  }
 }
 .events .event-container {
   display: flex;

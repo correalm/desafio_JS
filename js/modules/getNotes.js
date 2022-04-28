@@ -1,8 +1,7 @@
-import { farm } from './urls/farm.js'
+import { notes } from './urls/notes.js'
 
-export async function getFarm(){
-    const url = farm
-    
+export async function getNotes(){
+    const url = notes
     try {
         const response = await fetch(url)
         const data = await response.json()

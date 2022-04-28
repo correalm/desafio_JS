@@ -27,6 +27,8 @@
                 border-right: 1px solid #E7E8EF
                 box-sizing: border-box
                 width: 472px
+                @include base-mixins.w1049
+                    width: 275px
                 .event-header-title
                     display: flex
                     h3
@@ -57,7 +59,7 @@
             border: 1px solid #57760A
             border-radius: 8px
             width: fit-content
-            padding: 1px
+            padding: 2px
             margin-top: 6px
             p
                 font-family: Roboto
@@ -80,6 +82,9 @@
             justify-content: center
             margin-right: 20px
             cursor: pointer
+            @include base-mixins.w1049
+                align-items: center
+                justify-content: center
             
         &-container
             display: flex
