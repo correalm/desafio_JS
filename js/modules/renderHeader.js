@@ -24,9 +24,9 @@ export function renderHeader(element, index, boolean){
                <p>Colheita</p>
            </div>
            <div class="dates-date">
-               <p>${element.date !== null ? element.date.split('-').reverse().join('/') : "Não informado"}</p>
-               <p>${element.emergence_date ? element.emergence_date.split('-').reverse().join('/') : 'Não informado'}</p>
-               <p>${element.harvest_prediction_date !== null ? element.harvest_prediction_date.split('-').reverse().join('/') : "Não informado"}</p>
+               <p>${element.date !== null ? element.date.split('-').reverse().join('/') : "Sem data"}</p>
+               <p>${element.emergence_date ? element.emergence_date.split('-').reverse().join('/') : 'Sem data'}</p>
+               <p>${element.harvest_prediction_date !== null ? element.harvest_prediction_date.split('-').reverse().join('/') : "Sem data"}</p>
            </div>
        </div>
     

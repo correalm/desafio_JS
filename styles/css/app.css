@@ -281,7 +281,7 @@ main .farm-notes {
   padding: 20px 16px;
   border-right: 1px solid #E7E8EF;
   box-sizing: border-box;
-  width: 472px;
+  width: 90%;
 }
 @media (max-width: 1049px) {
   .events .event-header .events-header-farm-title {
