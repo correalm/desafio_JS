@@ -4,10 +4,12 @@ import {getPlantations} from './getPlantations.js'
 export async function renderAside(){
 
     const data = await getFarm().then(res => {
+        
         return res
     })
 
     const plantations = await getPlantations().then(res => {
+        console.log(res)
         return res  
     })
 
@@ -29,12 +31,13 @@ export async function renderAside(){
     const initials = data.owner.initials
     const obsFazenda = data.details.observation
 
+
     const aside = `
         <aside>
                 <div class="title">
                     <h3>Fazenda</h3>
                     <p farm-name>${farmName}</p>
-                    <p class="p-talhoes">${talhoes > 1 ? `${talhoes} talhões` : `1 talhão`}</p> 
+                    <p class="p-talhoes">${talhoes > 1 ? `${talhoes + rain.plots} talhões` : `1 talhão`}</p> 
                 </div>
                 <div class="info">
                     <div class="date">

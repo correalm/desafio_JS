@@ -1,5 +1,6 @@
 export function renderHeader(element, index, boolean){
     const divHeader = document.querySelector(".events")
+
     if (index === 0 && boolean) {
         const header = `
         <div class="event" >
