@@ -131,7 +131,6 @@ aside .info .wrapperAside p {
 }
 aside .info .date {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 16px;
 }
 @media (max-width: 751px) {
@@ -139,10 +138,8 @@ aside .info .date {
     justify-content: normal;
   }
 }
-@media (max-width: 751px) {
-  aside .info .date .visit {
-    margin-right: 32px;
-  }
+aside .info .date .visit {
+  margin-right: 32px;
 }
 aside .info .date .safra {
   margin-right: 20px;
