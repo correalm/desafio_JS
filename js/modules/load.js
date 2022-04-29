@@ -3,6 +3,7 @@ import {renderNotes} from './renderNotes.js'
 
 export function load(){
     window.onload = async () => {
+        // document.querySelector("main").className = "load"
         document.querySelector(".wrapper").style = "display: none;"
         const teste = document.querySelector(".farm-notes")
         const teste2 = document.querySelector(".events")
@@ -20,7 +21,8 @@ export function load(){
                 console.log(e)
     
             } finally {
-    
+                document.querySelector("main").classList.remove("load")
+                
                 document.querySelector("[load]").style = "display: none;"
                 document.querySelector(".wrapper").style = ""
             }

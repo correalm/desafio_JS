@@ -12,7 +12,7 @@ export function renderHeader(element, index, boolean){
            
                 <p cultivar><span size>${element.variety.name} - ${element.area}ha</span> </p>
                     <div class="plantado">
-                <p plantado>${element.state == "active" ? 'plantado' : ""}</p>
+                <p plantado>${element.state == "active" ? 'Plantado' : ""}</p>
             </div>
        </div>
        
