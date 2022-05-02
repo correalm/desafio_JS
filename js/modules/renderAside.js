@@ -11,9 +11,6 @@ export async function renderAside(){
          console.log(res)
          return res  
     })
-    
-
-    const plantations= farm
 
     const rain = await getRain().then(res => {
         return res
