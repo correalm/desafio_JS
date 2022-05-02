@@ -65,7 +65,6 @@ export function renderHeader(element, boolean){
     return false
     } 
     else {
-        console.log("Chegou no else")
         const header = `
         <div class="event" >
         <div class="event event-header" >
