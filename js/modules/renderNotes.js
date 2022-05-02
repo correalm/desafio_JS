@@ -6,11 +6,10 @@ import {renderHeader} from './renderHeader.js'
 
 export async function renderNotes(){
     /*
-        Coleta da notas ("Farm" e "Plantations" e dos plantations (talhões))
+        Coleta as notas ("Farm" e "Plantations") e plantations (talhões))
     */
 
     const notes = await getNotes().then(res => {
-        console.log(res)
         return res
     })
 
