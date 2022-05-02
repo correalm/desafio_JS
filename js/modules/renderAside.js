@@ -8,7 +8,6 @@ export async function renderAside(){
     })
 
     const plantations = await getPlantations().then(res => {
-         console.log(res)
          return res  
     })
 
