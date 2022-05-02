@@ -8,7 +8,7 @@ export async function renderAside(){
     })
 
     const plantations = await getPlantations().then(res => {
-        return res  
+         return res  
     })
 
     const rain = await getRain().then(res => {
@@ -29,12 +29,13 @@ export async function renderAside(){
     const initials = data.owner.initials
     const obsFazenda = data.details.observation
 
+
     const aside = `
         <aside>
                 <div class="title">
                     <h3>Fazenda</h3>
                     <p farm-name>${farmName}</p>
-                    <p class="p-talhoes">${talhoes > 1 ? `${talhoes} talhões` : `1 talhão`}</p> 
+                    <p class="p-talhoes">${talhoes > 1 ? `${talhoes + rain.plots} talhões` : `1 talhão`}</p> 
                 </div>
                 <div class="info">
                     <div class="date">
@@ -47,19 +48,21 @@ export async function renderAside(){
                             <p safra>${safra}</p>
                         </div>
                     </div>
-                    <div class="name">
-                        <div class="tecnico">
-                            <h3>Realizada por:</h3>
-                            <p nome-tecnico>${tecnico}</p>
+                    <div class="wrapperAside">
+                        <div class="name">
+                            <div class="tecnico">
+                                <h3>Realizada por:</h3>
+                                <p nome-tecnico>${tecnico}</p>
+                            </div>
+                            <div class="init">
+                                <p initials>${initials}</p>
+                            </div>  
                         </div>
-                        <div class="init">
-                            <p initials>${initials}</p>
-                        </div>  
-                    </div>
-                  <div class="pluv">
-                        <h3>Pluviometria</h3>
-                        <p><span><i class="fa-solid fa-droplet"></i></span>${rain.rain_until_date}mm</p>
-                        <p class="acumulo">Acumulado na safra</p>
+                    <div class="pluv">
+                            <h3>Pluviometria</h3>
+                            <p><span><i class="fa-solid fa-droplet"></i></span>${rain.rain_until_date}mm</p>
+                            <p class="acumulo">Acumulado na safra</p>
+                        </div> 
                     </div> 
                 </div>
                 <div class="obs">

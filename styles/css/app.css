@@ -29,7 +29,7 @@ header h1 {
   color: #363E48;
   font-size: 24px;
 }
-@media (max-width: 720px) {
+@media (max-width: 751px) {
   header h1 {
     width: 145px;
     font-size: 16px;
@@ -44,7 +44,7 @@ main {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  background-color: #E5E5E5;
+  background-color: #F5F6FA;
 }
 main .wrapper {
   width: 1050px;
@@ -52,15 +52,10 @@ main .wrapper {
   justify-content: center;
   margin: 66px 0 40px 0;
 }
-@media (max-width: 1049px) {
+@media (max-width: 751px) {
   main .wrapper {
-    width: 1050px;
-  }
-}
-@media (max-width: 720px) {
-  main .wrapper {
-    width: 100%;
     padding: 0px 16px;
+    width: 100%;
     margin-top: 40px;
     flex-direction: column;
     align-items: center;
@@ -89,10 +84,10 @@ aside {
   height: fit-content;
   width: 248px;
   color: green;
-  border: 2px solid #DFE0E7;
+  border: 1px solid #DFE0E7;
   border-radius: 8px;
 }
-@media (max-width: 720px) {
+@media (max-width: 751px) {
   aside {
     width: 100%;
     margin-right: 0px;
@@ -108,6 +103,7 @@ aside p {
   color: #415164;
   font-family: Inter;
   font-size: 15px;
+  text-transform: uppercase;
 }
 aside .title {
   padding: 16px;
@@ -117,15 +113,33 @@ aside .title .p-talhoes {
   color: #798AA4;
   font-size: 14px;
   font-weight: 400;
+  text-transform: none;
 }
 aside .info {
   padding: 16px;
   border-bottom: 1px solid #E7E8EF;
 }
+aside .info .wrapperAside p {
+  text-transform: none;
+}
+@media (max-width: 751px) {
+  aside .info .wrapperAside {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+}
 aside .info .date {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 16px;
+}
+@media (max-width: 751px) {
+  aside .info .date {
+    justify-content: normal;
+  }
+}
+aside .info .date .visit {
+  margin-right: 32px;
 }
 aside .info .date .safra {
   margin-right: 20px;
@@ -133,11 +147,10 @@ aside .info .date .safra {
 aside .info .name {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin-bottom: 16px;
 }
 aside .info .name .init {
-  margin-right: 75px;
+  margin-left: 16px;
   border: 1px solid #DFE0E7;
   width: 32px;
   height: 32px;
@@ -149,6 +162,11 @@ aside .info .name .init {
 }
 aside .info .name .init p {
   font-size: 14px;
+}
+@media (max-width: 751px) {
+  aside .info .pluv {
+    margin-left: 32px;
+  }
 }
 aside .info .pluv span {
   padding-right: 2px;
@@ -185,7 +203,7 @@ aside .press {
 }
 
 main .content {
-  background-color: #E5E5E5;
+  background-color: #F5F6FA;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -202,7 +220,7 @@ main .content {
     flex: 0;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 751px) {
   main .content {
     width: 100%;
   }
@@ -215,7 +233,7 @@ main h2 {
   margin-top: -31px;
   margin-bottom: 8px;
 }
-@media (max-width: 720px) {
+@media (max-width: 751px) {
   main h2 {
     margin-top: 16px;
   }
@@ -230,7 +248,7 @@ main .farm-notes {
     flex-direction: column;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 751px) {
   main .farm-notes {
     width: 100%;
   }
@@ -263,11 +281,11 @@ main .farm-notes {
   padding: 20px 16px;
   border-right: 1px solid #E7E8EF;
   box-sizing: border-box;
-  width: 472px;
+  width: 90%;
 }
 @media (max-width: 1049px) {
   .events .event-header .events-header-farm-title {
-    width: 370px;
+    width: 91%;
   }
 }
 .events .event-header .events-header-farm-title .event-header-title {
@@ -312,10 +330,10 @@ main .farm-notes {
   color: #57760A;
 }
 .events .event .events-header-dates {
-  padding-right: 16px;
+  padding: 16px;
   display: flex;
   justify-content: space-between;
-  width: 219px;
+  width: 242px;
   align-items: center;
   border-right: 1px solid #E7E8EF;
 }
@@ -328,19 +346,13 @@ main .farm-notes {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
   cursor: pointer;
+  width: 62px;
 }
 @media (max-width: 1049px) {
   .events .event .events-container-arrow {
     align-items: center;
     justify-content: center;
-  }
-}
-@media (max-width: 720px) {
-  .events .event .events-container-arrow {
-    width: 62px;
-    margin: 0;
   }
 }
 .events .event-container {
@@ -380,7 +392,7 @@ main .farm-notes {
     margin-right: 0px;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 751px) {
   .card {
     width: 100%;
     margin-right: 0px;
