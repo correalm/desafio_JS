@@ -1,3 +1,3 @@
-import {load} from './modules/load.js'
+import {load} from './controller/load.js'
 
 load()

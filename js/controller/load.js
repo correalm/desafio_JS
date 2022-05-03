@@ -1,5 +1,9 @@
-import {renderAside} from "./renderAside.js"
-import {renderNotes} from './renderNotes.js'
+import {getFarm, getRain} from '../model/getFarm.js'
+import {getPlantations} from '../model/getPlantations.js'
+import {getNotes} from '../model/getNotes.js'
+import {renderAside} from "../view/renderAside.js"
+import {renderNotes} from './controllerNotes.js'
+
 
 export function load(){
     window.onload = async () => {
@@ -10,10 +14,15 @@ export function load(){
         const title = `<h2>Anotações da fazenda</h2>`
         const title2 = `<h2>Eventos dos talhões</h2>`
 
+        const farm = await getFarm()
+        const plantations = await getPlantations()
+        const rain = await getRain()
+        const notes = await getNotes()
+
         if (document.readyState === "complete"){
             try{
-                await renderAside()
-                await renderNotes()
+                await renderAside(farm, plantations, rain)
+                await renderNotes(notes, plantations)
                 teste.insertAdjacentHTML("beforebegin", title)
                 teste2.insertAdjacentHTML("afterbegin", title2)
     
@@ -22,7 +31,6 @@ export function load(){
     
             } finally {
                 document.querySelector("main").classList.remove("load")
-                
                 document.querySelector("[load]").style = "display: none;"
                 document.querySelector(".wrapper").style = ""
             }

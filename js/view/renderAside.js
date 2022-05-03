@@ -1,33 +1,18 @@
-import {getFarm, getRain} from './getFarm.js'
-import {getPlantations} from './getPlantations.js'
+export async function renderAside(farm, plantations, rain){
 
-export async function renderAside(){
-
-    const data = await getFarm().then(res => {
-        return res
-    })
-
-    const plantations = await getPlantations().then(res => {
-         return res  
-    })
-
-    const rain = await getRain().then(res => {
-        return res
-    })
-   
     const wrapper = document.querySelector(".wrapper")
 
     // config a data
-    const date = data.details.date
+    const date = farm.details.date
     const newDate = date.split("-")
     const dataVisita = `${newDate[2]}/${newDate[1]}/${newDate[0]}`
 
-    const farmName = data.farm.name
+    const farmName = farm.farm.name
     const talhoes = plantations.results.length
-    const safra = data.harvest.name
-    const tecnico = data.owner.name
-    const initials = data.owner.initials
-    const obsFazenda = data.details.observation
+    const safra = farm.harvest.name
+    const tecnico = farm.owner.name
+    const initials = farm.owner.initials
+    const obsFarm = farm.details.observation
 
 
     const aside = `
@@ -67,7 +52,7 @@ export async function renderAside(){
                 </div>
                 <div class="obs">
                     <h3>Observações</h3>
-                    <p obs-fazenda>${obsFazenda}</p>
+                    <p obs-fazenda>${obsFarm}</p>
                 </div>
                 <div class="press">
                     <button class="btn">
